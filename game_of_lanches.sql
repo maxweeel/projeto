@@ -1,23 +1,21 @@
 /* game_of_lanches: */
-CREAT DATABASE game_of_lanches;
-
 USE game_of_lanches;
 
 CREATE TABLE `usuario` (
-    `id_usuario` INT(11) NOT NUll ,
+    `id_usuario` INT(11) NOT NUll AUTO_INCREMENT,
     `nome` VARCHAR(30) DEFAULT NULL,
     `endereco` VARCHAR(30) DEFAULT NULL,
     `cidade` VARCHAR(30) DEFAULT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `telefone` (
-    `id_telefone` INT(11)NOT NULL,
+    `id_telefone` INT(11)NOT NULL AUTO_INCREMENT,
     `telefone` VARCHAR(16) DEFAULT NULL,
     `fk_usuario_id_usuario` int(11) DEFAULT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `pedidos` (
-    `id_pedidos` INT(11) NOT NULL,
+    `id_pedidos` INT(11) NOT NULL AUTO_INCREMENT,
     `valor_dos_pedidos` VARCHAR(20) DEFAULT NULL,
     `valor_total` VARCHAR(30) DEFAULT NULL,
     `fk_usuario_id_usuario` int(11) DEFAULT NULL,
@@ -25,13 +23,13 @@ CREATE TABLE `pedidos` (
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE E_mail (
-    id_email int(11) NOT NULL,
+    id_email int(11) NOT NULL AUTO_INCREMENT,
     email VARCHAR(40) DEFAULT NULL,
     fk_usuario_id_usuario int(11) DEFAULT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE Produdos (
-    id_prdudos int(11) NOT NULL,
+    id_prdudos int(11) NOT NULL AUTO_INCREMENT,
     refeiçoe VARCHAR(200) DEFAULT NULL,
     hamburger VARCHAR(60) DEFAULT NULL,
     pizza VARCHAR(60) DEFAULT NULL,
